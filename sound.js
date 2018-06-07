@@ -59,7 +59,7 @@ function Sound(filename, basePath, onError, options) {
   }
 
   this._loaded = false;
-  this._key = asset ? filename : djb2Code(filename); //if the file is an asset, use the asset number as the key
+  this._key = Date.now() + Math.random(); // asset ? filename : djb2Code(filename); //if the file is an asset, use the asset number as the key
   this._playing = false;
   this._duration = -1;
   this._numberOfChannels = -1;
